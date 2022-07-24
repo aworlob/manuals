@@ -1,0 +1,61 @@
+OpenVPN/Wireguard quick install
+
+Main stages:
+
+1.Create instance on Linux based OS
+2.Update and upgrade system
+3.Change firewall rules for traffic (Security groups in AWS)
+
+Stages if you want to use OpenVPN:
+
+1.Get the script and make it executable:
+
+curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
+chmod +x openvpn-install.sh
+
+2.Then run it:s
+
+./openvpn-install.sh
+
+You need to run the script as root and have the TUN module enabled.
+
+The first time you run it, you have to follow the assistant and answer a few questions to setup your VPN server.
+
+When OpenVPN is installed, you can run the script again, and you will get the choice to:
+
+Add a client
+Remove a client
+Uninstall OpenVPN
+
+In your home directory, you will have .ovpn files. These are the client configuration files. Download them from your server and connect using your favorite OpenVPN client.
+
+Stages if you want to use Wireguard.
+
+1.Download and execute the script. Answer the questions asked by the script and it will take care of the rest.
+
+curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
+chmod +x wireguard-install.sh
+
+2. Run it.
+
+./wireguard-install.sh
+
+When Wireguard is installed, you can run the script again, and you will get the choice to:
+
+Add a client
+Remove a client
+Uninstall Wireguard
+
+Client side
+
+1.You need to install wireguard on your Linux (sudo apt install wireguard)
+2.Add your Wireguard config from server to your client machine in /etc/wireguard directory.
+Your config on client machine must be named like "wg0.conf".
+
+
+Tips:
+1.When you install wireguard check your PUBLIC IP of your server (sometimes default script settings autofill wrong IP adress.
+
+Source:
+https://github.com/angristan/openvpn-install
+https://github.com/angristan/wireguard-install
