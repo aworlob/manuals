@@ -55,6 +55,8 @@ Client side
 2.Add your Wireguard config from server to your client machine in /etc/wireguard directory.
 Your config on client machine must be named like "wg0.conf".
 
+Start Wireguard:
+wg-quick up wg0
 
 Source:
 https://github.com/angristan/openvpn-install
