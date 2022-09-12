@@ -40,6 +40,9 @@ chmod +x wireguard-install.sh
 
 ./wireguard-install.sh
 
+Tips:
+When you install wireguard check your PUBLIC IP of your server (sometimes default script settings autofill wrong IP adress.
+
 When Wireguard is installed, you can run the script again, and you will get the choice to:
 
 Add a client
@@ -52,9 +55,6 @@ Client side
 2.Add your Wireguard config from server to your client machine in /etc/wireguard directory.
 Your config on client machine must be named like "wg0.conf".
 
-
-Tips:
-1.When you install wireguard check your PUBLIC IP of your server (sometimes default script settings autofill wrong IP adress.
 
 Source:
 https://github.com/angristan/openvpn-install
